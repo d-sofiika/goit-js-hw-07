@@ -14,7 +14,7 @@ const images = [
  
 ];
 
-
+///elemCategory.classList.add("elem");
 
 
 images.forEach(item => {
@@ -24,10 +24,10 @@ images.forEach(item => {
   imgContent.src = item.url;
   imgContent.alt = item.alt;
   
-
+  
   galleryImg.append(imgList);
   imgList.append(imgContent);
-
+  imgList.classList.add("elem");
 });
 
 
