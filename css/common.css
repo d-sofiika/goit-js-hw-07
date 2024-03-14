@@ -135,3 +135,17 @@ button{
   letter-spacing: 0.04em;
   color: #fff;
 }
+
+/* Task 5 */
+.widget{
+  font-family: "Montserrat", sans-serif;
+  
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+.change-color{
+  width: 148px;
+}
+
+/* Task 6 */
+
