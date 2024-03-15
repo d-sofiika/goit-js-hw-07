@@ -10,10 +10,12 @@ const destroyBtn = document.querySelector('button[data-destroy]');
 const bigBox = document.querySelector("#boxes")
 let width = 30;
 let height = 30;
+
+
 createBtn.addEventListener("click", create);
 
 function create() {
-  input.focus();
+ 
   const amount = input.value;
   if (amount < 0 || amount > 100){
     alert("Error");
@@ -32,14 +34,16 @@ function createBoxes(amount){
     newElem.style.backgroundColor = getRandomHexColor();
     bigBox.append(newElem);
     
-    
+    newElem.style.width += 10;
+    newElem.style.height += 10;
   }
 }
 
 
 destroyBtn.addEventListener("click", (destroy))
 function destroy() {
-  input.focus();
+
+  input.value = "";
 }
   
 
