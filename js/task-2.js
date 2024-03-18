@@ -15,19 +15,18 @@ const images = [
 ];
 
 ///elemCategory.classList.add("elem");
-
+const galleryImg = document.querySelector(".gallery");
 
 images.forEach(item => {
-  const imgContent = document.createElement("img");
   const imgList = document.createElement("li");
-  const galleryImg = document.querySelector(".gallery");
+  const imgContent = document.createElement("img");
   imgContent.src = item.url;
   imgContent.alt = item.alt;
   
   
-  galleryImg.append(imgList);
-  imgList.append(imgContent);
+  galleryImg.append(imgList, imgContent);
+
+ 
   imgList.classList.add("elem");
 });
-
 

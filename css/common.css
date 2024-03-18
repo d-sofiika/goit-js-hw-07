@@ -54,9 +54,9 @@ h2{
 
 /* Task 2 */
 .gallery{
+
   display: flex;
-  gap: 24px;
-  
+  gap: 12px;
 }
 img{
   width: 360px;
