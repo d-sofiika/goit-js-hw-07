@@ -1,7 +1,7 @@
 const images = [
   {
-    url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    alt: 'White and Black Long Fur Cat',
+    url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    alt: "White and Black Long Fur Cat",
   },
   {
     url: 'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
@@ -17,16 +17,10 @@ const images = [
 ///elemCategory.classList.add("elem");
 const galleryImg = document.querySelector(".gallery");
 
-images.forEach(item => {
-  const imgList = document.createElement("li");
-  const imgContent = document.createElement("img");
-  imgContent.src = item.url;
-  imgContent.alt = item.alt;
-  
-  
-  galleryImg.append(imgList, imgContent);
+const markup = images
+  .map(({url, alt}) => `<li class="elem"><img src=${url} alt=${alt}></li>`)
+  .join("");
 
- 
-  imgList.classList.add("elem");
-});
+galleryImg.innerHTML = markup;
+
 
